@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "849bfc42-82da-407f-b388-21d67d6e594d",
+		"name": "GolangTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21633772"
+	},
+	"item": [
+		{
+			"name": "Database",
+			"item": [
+				{
+					"name": "Migrate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8005/db/migrate",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"db",
+								"migrate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"abc\",\r\n    \"password\": \"edf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/api/user/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/user/get/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"user",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cddbbe76-63de-4d8b-87b0-20b3a46aa2c1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/api/user/update/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"user",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cddbbe76-63de-4d8b-87b0-20b3a46aa2c1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/user/delete/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "cddbbe76-63de-4d8b-87b0-20b3a46aa2c1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"abcghi\",\r\n    \"password\": \"ZWRmZ2hp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Message",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"abc\",\r\n    \"user_id\": \"cbd31fbd-ec78-4ad1-b37f-c4820f9d057f\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/api/post/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/post/get/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1955e329-b84b-4c5b-8022-bb12267e2dbd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/post/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\":\"abcdef\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/api/post/update/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1955e329-b84b-4c5b-8022-bb12267e2dbd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Dkh0h3fhfUVuS0jZ9uVbhV4vC6AWX4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8005/api/post/delete/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "15790cda-c5eb-4fce-a4f4-a72d4c077823"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post Message Response",
+			"item": [
+				{
+					"name": "Create Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"message\": \"abc\",\r\n    \"user_id\": \"cbd31fbd-ec78-4ad1-b37f-c4820f9d057f\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8005/api/post-response/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post-response",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/post-response/get/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post-response",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1955e329-b84b-4c5b-8022-bb12267e2dbd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Copy",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/post-response/get-all/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post-response",
+								"get-all",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "a96ec935-ff1c-4c9b-aad7-44101ae9a998"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/post-response/update/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post-response",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "BpLnfgDsc3WD9F3qNfHK6a95jjJkwz",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8005/api/post/delete/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"post",
+								"delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1955e329-b84b-4c5b-8022-bb12267e2dbd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

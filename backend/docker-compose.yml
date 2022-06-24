@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  mydb:
+    image: "postgres:11"
+    container_name: mydb
+    ports:
+      - "5450:5432"
+    environment:
+      TZ: "Europe/Stockholm"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_DB: "chaintraced"
+    networks:
+      - my-network
+networks:
+  my-network:
+      name: my-network
+
